@@ -17,5 +17,10 @@ class Sale {
     getIva(){
         return this.iva;
     }
+
+    getProducts() {
+        console.table(this.products);
+        return this.products;
+    }
 }
 
