@@ -1,10 +1,16 @@
 class Sale {
-    constructor(customer, products, date, total, subtotal, iva) {
+    constructor(customer, iva = 0.16) {
         this.customer = customer;
-        this.products = products;
-        this.date = date;
-        this.total = total;
-        this.subtotal = subtotal;
+        this.products = this.customer.cart;
+        this.date = Useful.getFormattedDate();
         this.iva = iva;
+    }
+
+    checkout() {
+        this.subTotal = 0;
+        this.subTotal = this.customer.getCartSubTotal();
+        this.total = Useful.getIva(this.subTotal, this.iva);
+
+        return this;
     }
 }
