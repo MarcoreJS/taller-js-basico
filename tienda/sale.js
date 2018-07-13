@@ -13,4 +13,9 @@ class Sale {
 
         return this;
     }
+
+    getIva(){
+        return this.iva;
+    }
 }
+

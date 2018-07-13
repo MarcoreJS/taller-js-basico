@@ -1,3 +1,4 @@
+//explicar prototype
 class Customer {
     constructor(name, email, age, gender, cart = []) {
         this.name = name;

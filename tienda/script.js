@@ -1,6 +1,7 @@
 var client = new Customer('Curie', 'hi.im.curie@gmail.com', 1, 'F');
 var store = [];
 var sale;
+var check;
 
 store.push(new Product('Deli MIX', 90, 'DMCSH10'));
 store.push(new Product('Sobre whiskas salmon', 9, 'SWS'));
@@ -13,3 +14,4 @@ store.forEach(pr => {
 });
 
 sale = new Sale(client);
+check = new Checkout(sale);
