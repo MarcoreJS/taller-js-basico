@@ -13,9 +13,9 @@ class Customer {
 }
 
 Customer.prototype.getCartSubTotal = function() {
-    let r = 0;
+    let result = 0;
     this.cart.forEach(prod => {
-        r += prod.price;
+        result += prod.price;
     });
-    return r;
+    return result;
 }

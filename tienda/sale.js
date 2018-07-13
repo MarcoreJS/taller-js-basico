@@ -14,13 +14,13 @@ class Sale {
         return this;
     }
 
-    getIva(){
+    getIva() {
         return this.iva;
     }
+}
 
-    getProducts() {
-        console.table(this.products);
-        return this.products;
-    }
+Sale.prototype.getProducts = function () {
+    console.table(this.products);
+    return this.products;
 }
 
