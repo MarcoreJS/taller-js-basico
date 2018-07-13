@@ -1,4 +1,3 @@
-//explicar prototype
 class Customer {
     constructor(name, email, age, gender, cart = []) {
         this.name = name;
@@ -11,12 +10,12 @@ class Customer {
     addToCart(prod) {
         this.cart.push(prod);
     }
+}
 
-    getCartSubTotal() { 
-        let r = 0;
-        this.cart.forEach(prod => {
-            r += prod.price;
-        });
-        return r;
-    }
+Customer.prototype.getCartSubTotal = function() {
+    let r = 0;
+    this.cart.forEach(prod => {
+        r += prod.price;
+    });
+    return r;
 }
